@@ -12,7 +12,7 @@ void main() {
 
 
 void main() { 
- var day = 'b'; // Misalkan 1 = Senin, 2 = Selasa, dst. 
+ var day = 'b';
   
   switch (day) { 
     case 'a': 
