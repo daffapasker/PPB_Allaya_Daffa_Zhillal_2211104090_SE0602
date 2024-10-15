@@ -24,13 +24,13 @@ class HomePage extends StatelessWidget {
     },
     {
       'title': 'Candi Borobudur',
-      'imageUrl': 'https://id.wikipedia.org/wiki/Berkas:Stupa_Borobudur.jpg',
+      'imageUrl': 'https://upload.wikimedia.org/wikipedia/commons/7/77/Stupa_Borobudur.jpg',
       'description': 'Candi Borobudur adalah destinasi wisata terkenal di Indonesia dan dikunjungi oleh ribuan wisatawan...',
     },
     {
-      'title': 'curug kanesia',
-      'imageUrl': 'https://cdn.rri.co.id/berita/47/images/1709476352504-f/vj2qu1zexu27lhz.jpeg',
-      'description': 'Curug Kanesia memiliki air yang sangat jernih sampai ikan pun keliatan apabila kita lihat dari jarak yang tidak terlalu jauh. Pengunjung juga dapat berenang dan merasakan segarnya air di Curug Kanesia. Curug ini memiliki kedalaman kurang lebih 7 meter sehingga cocok bagi pecinta snorkeling....',
+      'title': 'curug lawe',
+      'imageUrl': 'https://upload.wikimedia.org/wikipedia/commons/7/71/Curug_Lawe_-_panoramio.jpg',
+      'description': 'Disebut Curug Lawe karena air yang jatuh dari tebing curam itu terlihat bagai benang-benang putih, yang dalam bahasa Jawa disebut lawe. Versi lain menjelaskan dinamakan Curug Lawe karena konon jumlah air terjun yang ada, baik dari yang besar hingga yang terkecil berjumlah 25 buah yang dalam bahasa Jawa Selawe....',
     },
   ];
 
