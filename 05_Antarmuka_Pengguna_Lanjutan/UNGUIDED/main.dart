@@ -24,40 +24,23 @@ class MyApp extends StatelessWidget {
 class MyHomePage extends StatelessWidget {
   final List<Map<String, String>> wisataList = [
     {
-      'nama': 'Alun-Alun Purwokerto',
-      'imageUrl':
-          'https://radarbanyumas.disway.id/upload/2021/03/Renovasi-Tahap-II-Alun-Alun-Purwokerto-Dialokasikan-Anggaran-16-Miliar.jpg',
-      'deskripsi':
-          'Alun-Alun Purwokerto adalah ruang publik yang menjadi pusat keramaian. Tempat ini dikelilingi oleh bangunan penting seperti Masjid Agung, berbagai kafe, dan restoran.',
+      'title': 'Pantai Laguna Lembupurwo',
+      'imageUrl': 'https://upload.wikimedia.org/wikipedia/id/4/4c/Laguna_Lembupurwo.jpg',
+      'description':
+          'Pantai Lembupurwo merupakan sebuah pantai yang terletak di Desa Lembupurwo, Kecamatan Mirit, Kabupaten Kebumen...',
     },
     {
-      'nama': 'Museum Bank Rakyat Indonesia',
-      'imageUrl':
-          'https://purwokertokita.com/wp-content/uploads/2017/08/museum-BRI-purwokerto-384x220.jpg',
-      'deskripsi':
-          'Museum ini menampilkan sejarah perbankan di Indonesia dan menjadi tempat wisata edukasi yang menarik. Pengunjung dapat belajar tentang sejarah Bank Rakyat Indonesia (BRI), yang didirikan di Purwokerto.',
+      'title': 'Candi Borobudur',
+      'imageUrl': 'https://upload.wikimedia.org/wikipedia/commons/7/77/Stupa_Borobudur.jpg',
+      'description': 'Candi Borobudur adalah destinasi wisata terkenal di Indonesia dan dikunjungi oleh ribuan wisatawan...',
     },
     {
-      'nama': 'Baturraden Adventure Forest',
-      'imageUrl':
-          'https://atourin.obs.ap-southeast-3.myhuaweicloud.com/images/destination/banyumas/baturraden-adventure-forest-profile1672684727.jpeg?x-image-process=image/resize,p_100,limit_1/imageslim',
-      'deskripsi':
-          'Baturraden Adventure Forest menawarkan pengalaman petualangan di alam terbuka, termasuk aktivitas seperti hiking, flying fox, dan berkemah. Dikelilingi oleh hutan pinus yang indah, cocok untuk pencinta alam.',
-    },
-    {
-      'nama': 'Curug Gede',
-      'imageUrl': 'https://elsotel.id/wp-content/uploads/2021/12/blog-3-1.jpg',
-      'deskripsi':
-          'Curug Gede adalah air terjun yang terletak di kawasan Baturraden. Memiliki aliran air yang jernih dan pemandangan alam yang masih alami.',
-    },
-    {
-      'nama': 'Telaga Kumpe',
-      'imageUrl':
-          'https://asset-2.tstatic.net/banyumas/foto/bank/images/telaga-kumpe-desa-gunung-lurah-kecamatan-cilongok-banyumas.jpg',
-      'deskripsi':
-          'Telaga Kumpe adalah telaga alami yang tenang dan asri, terletak tidak jauh dari pusat kota Banyumas. Cocok untuk memancing atau sekedar menikmati pemandangan.',
+      'title': 'curug lawe',
+      'imageUrl': 'https://upload.wikimedia.org/wikipedia/commons/7/71/Curug_Lawe_-_panoramio.jpg',
+      'description': 'Disebut Curug Lawe karena air yang jatuh dari tebing curam itu terlihat bagai benang-benang putih, yang dalam bahasa Jawa disebut lawe. Versi lain menjelaskan dinamakan Curug Lawe karena konon jumlah air terjun yang ada, baik dari yang besar hingga yang terkecil berjumlah 25 buah yang dalam bahasa Jawa Selawe....',
     },
   ];
+
 
   @override
   Widget build(BuildContext context) {
