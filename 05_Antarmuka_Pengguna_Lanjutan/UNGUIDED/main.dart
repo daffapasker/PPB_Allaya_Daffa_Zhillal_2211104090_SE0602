@@ -24,50 +24,54 @@ class MyApp extends StatelessWidget {
 class MyHomePage extends StatelessWidget {
   final List<Map<String, String>> wisataList = [
     {
-      'title': 'Pantai Laguna Lembupurwo',
+      'nama': 'Pantai Laguna Lembupurwo',
       'imageUrl': 'https://upload.wikimedia.org/wikipedia/id/4/4c/Laguna_Lembupurwo.jpg',
-      'description':
+      'deskripsi':
           'Pantai Lembupurwo merupakan sebuah pantai yang terletak di Desa Lembupurwo, Kecamatan Mirit, Kabupaten Kebumen...',
     },
     {
-      'title': 'Candi Borobudur',
+      'nama': 'Candi Borobudur',
       'imageUrl': 'https://upload.wikimedia.org/wikipedia/commons/7/77/Stupa_Borobudur.jpg',
-      'description': 'Candi Borobudur adalah destinasi wisata terkenal di Indonesia dan dikunjungi oleh ribuan wisatawan...',
+      'deskripsi': 'Candi Borobudur adalah destinasi wisata terkenal di Indonesia dan dikunjungi oleh ribuan wisatawan...',
     },
     {
-      'title': 'curug lawe',
+      'nama': 'Curug Lawe',
       'imageUrl': 'https://upload.wikimedia.org/wikipedia/commons/7/71/Curug_Lawe_-_panoramio.jpg',
-      'description': 'Disebut Curug Lawe karena air yang jatuh dari tebing curam itu terlihat bagai benang-benang putih, yang dalam bahasa Jawa disebut lawe. Versi lain menjelaskan dinamakan Curug Lawe karena konon jumlah air terjun yang ada, baik dari yang besar hingga yang terkecil berjumlah 25 buah yang dalam bahasa Jawa Selawe....',
+      'deskripsi': 'Disebut Curug Lawe karena air yang jatuh dari tebing curam itu terlihat bagai benang-benang putih...',
     },
   ];
 
-
   @override
   Widget build(BuildContext context) {
-    return CustomScrollView(
-      slivers: <Widget>[
-        SliverAppBar(
-          pinned: true,
-          expandedHeight: 200.0,
-          flexibleSpace: FlexibleSpaceBar(
-            title: Text('Wisata Banyumas'),
-
+    return Scaffold(
+      body: CustomScrollView(
+        slivers: <Widget>[
+          SliverAppBar(
+            pinned: true,
+            expandedHeight: 200.0,
+            flexibleSpace: FlexibleSpaceBar(
+              title: Text('Wisata Jawa'),
+              background: Image.network(
+                'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/08/76/9a/93/dataran-tinggi-dieng.jpg?w=800&h=500&s=1',
+                fit: BoxFit.cover,
+              ),
+            ),
+            backgroundColor: Colors.green.shade700,
           ),
-          backgroundColor: Colors.green.shade700,
-        ),
-        SliverList(
-          delegate: SliverChildBuilderDelegate(
-            (BuildContext context, int index) {
-              return wisataCard(
-                wisataList[index]['nama']!,
-                wisataList[index]['imageUrl']!,
-                wisataList[index]['deskripsi']!,
-              );
-            },
-            childCount: wisataList.length,
+          SliverList(
+            delegate: SliverChildBuilderDelegate(
+              (BuildContext context, int index) {
+                return wisataCard(
+                  wisataList[index]['nama']!,
+                  wisataList[index]['imageUrl']!,
+                  wisataList[index]['deskripsi']!,
+                );
+              },
+              childCount: wisataList.length,
+            ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 
