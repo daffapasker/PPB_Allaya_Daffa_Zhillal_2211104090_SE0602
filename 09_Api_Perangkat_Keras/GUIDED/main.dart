@@ -1,30 +1,22 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'view/my_home_page.dart';
-import 'view/detail_page.dart';
+import 'package:praktikum_9/camera_screen.dart';
 
 void main() {
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-  
+  const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
-      initialRoute: '/',
-      getPages: [
-        GetPage(
-          name: '/',
-          page: () => MyHomePage(),
-        ),
-        GetPage(
-          name: '/detail',
-          page: () => DetailPage(),
-        ),
-      ],
+    return MaterialApp(
+      title: 'Guided_09',
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        useMaterial3: true,
+      ),
+      home: CameraScreen(), // Set the home screen to CameraScreen
     );
   }
 }
