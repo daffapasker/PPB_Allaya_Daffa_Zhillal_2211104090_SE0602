@@ -29,33 +29,23 @@ class _HomePageState extends State<HomePage> {
   Uint8List? _webImage;
   final ImagePicker _picker = ImagePicker();
 
-  Future<void> _pickImageFromCamera() async {
+  Future<void> _pickImage(ImageSource source) async {
     try {
-      final XFile? pickedFile =
-          await _picker.pickImage(source: ImageSource.camera);
+      final XFile? pickedFile = await _picker.pickImage(source: source);
       if (pickedFile != null) {
         final Uint8List bytes = await pickedFile.readAsBytes();
         setState(() {
           _webImage = bytes;
         });
+      } else {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text('No image selected')),
+        );
       }
     } catch (e) {
-      print("Error picking image from camera: $e");
-    }
-  }
-
-  Future<void> _pickImageFromGallery() async {
-    try {
-      final XFile? pickedFile =
-          await _picker.pickImage(source: ImageSource.gallery);
-      if (pickedFile != null) {
-        final Uint8List bytes = await pickedFile.readAsBytes();
-        setState(() {
-          _webImage = bytes;
-        });
-      }
-    } catch (e) {
-      print("Error picking image from gallery: $e");
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('Error picking image: $e')),
+      );
     }
   }
 
@@ -121,7 +111,7 @@ class _HomePageState extends State<HomePage> {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     ElevatedButton.icon(
-                      onPressed: _pickImageFromCamera,
+                      onPressed: () => _pickImage(ImageSource.camera),
                       icon: Icon(Icons.camera_alt, color: Colors.white),
                       label: Text("Camera"),
                       style: ElevatedButton.styleFrom(
@@ -133,7 +123,7 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ),
                     ElevatedButton.icon(
-                      onPressed: _pickImageFromGallery,
+                      onPressed: () => _pickImage(ImageSource.gallery),
                       icon: Icon(Icons.photo, color: Colors.white),
                       label: Text("Gallery"),
                       style: ElevatedButton.styleFrom(
